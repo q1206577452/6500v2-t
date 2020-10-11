@@ -12,4 +12,6 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-sed -i 's/KERNEL_PATCHVER:=5.4/' ./target/linux/ar71xx/Makefile  #修改内核版本
+rm -rf autocore
+svn co https://github.com/project-openwrt/openwrt/branches/18.06-kernel5.4/package/lean/autocore
+popd
